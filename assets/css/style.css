@@ -182,3 +182,27 @@
 
 /***** Footer *****/
 
+footer {
+    background-color: #353535;
+    color: white;
+    padding-top: 22px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+footer .nav {
+    list-style: none;
+    margin-left: -40px;
+}
+
+footer .nav li {
+    margin-bottom: 5px;
+}
+
+.footer p {
+    font-family: Shrikhand;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
