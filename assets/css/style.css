@@ -104,3 +104,81 @@
 	border-radius: 50px;
 	color: white;
 }
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.card img {
+    object-fit: cover;
+}
+
+/***** Restaurant *****/
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f7f7f7;
+    padding-left: 20px ;
+    padding-right: 20px;
+    padding-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.restaurant-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.restaurant-card .card {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    max-height: 260px;
+    height: 100%;
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+}
+
+.restaurant-card img {
+    height: 180px ;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.restaurant-card .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-card .card-txt {
+    margin-left: 10px;
+}
+
+.restaurant-card .card-title {
+    margin-top: 16px;
+}
+
+.restaurant-card .card-subtitle {
+    margin-top: -10px;
+}
+
+.restaurant-card .heart {
+    margin-right: 20px;
+}
+
+/***** Footer *****/
+
