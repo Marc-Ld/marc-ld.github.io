@@ -12,18 +12,23 @@
 }
 
 .body {
-    margin: 0;
+    margin: 0px;
 }
 
 .header {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 14px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     img {
         width: 162px;
         height: 44px;
         object-fit: contain;
+    }
+    i {
+        color: #353535;
+        position: absolute;
     }
 }
 
@@ -36,6 +41,12 @@
     font-size: 16px;
     background-color: #EAEAEA;
     color: #353535;
+    img {
+        margin-top: -2px;
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+    }
 }
 
 .main-page-top {
@@ -167,6 +178,76 @@
     }
 }
 
+/***** Menu *****/
+
+.menu {
+    border-radius: 40px 40px 0px 0px;
+    background-color: #f7f7f7;
+    padding-top: 32px;
+    margin-top: -50px;
+}
+
+.menu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 17px 0;
+    h2 {
+        font-family: Shrikhand;
+        font-size: 28px;
+    }
+    i {
+        margin-right: 24px;
+    }
+}
+
+.menu-section {
+    padding: 40px 13px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-type {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 634px;
+}
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .card {
+        display: flex;
+        flex-direction: column;
+        max-width: 634px;
+        width: 100%;
+        max-height: 69px;
+        height: 100%;
+        padding-bottom: 0px;
+        margin-bottom: 18px;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    }
+    .card-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card-txt {
+        margin-left: 15px;
+    }
+    .card-title {
+        margin-top: 12px;
+    }
+    .card-subtitle {
+        margin-top: -12px;
+    }
+    .price {
+        margin-right: 20px;
+    }
+    
+}
+
 /***** Footer *****/
 
 footer {
@@ -188,5 +269,9 @@ footer {
         font-family: Shrikhand;
         margin-bottom: 0px;
         margin-top: 0px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
     }
 }
