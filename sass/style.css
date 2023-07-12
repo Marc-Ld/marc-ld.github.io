@@ -20,14 +20,9 @@
   align-items: center;
   justify-content: center;
   background: white;
-  transition: opacity 0.75s, visibility 0.75s;
-  transition-delay: 3s;
-  opacity: 0;
-}
-
-.loader--hidden {
-  opacity: 0;
-  visibility: hidden;
+  z-index: 2;
+  animation: visibility 250ms linear 3s;
+  animation-fill-mode: forwards;
 }
 
 .loader::after {
@@ -46,6 +41,15 @@
   }
   to {
     transform: rotate(1turn);
+  }
+}
+@keyframes visibility {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 .body {
@@ -144,7 +148,8 @@
   left: 0;
   border-radius: 25px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
-  background-color: linear-gradient(#f8c2e9 -11.44%, #b58ee0 123.93%);
+  background: linear-gradient(#FF79DA -11.44%, #9356DC 123.93%);
+  filter: brightness(1.15);
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
@@ -250,6 +255,10 @@
 
 /***** Menu *****/
 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 40px 40px 0px 0px;
   background-color: #f7f7f7;
   padding-top: 32px;
@@ -258,9 +267,10 @@
 
 .menu-title {
   display: flex;
+  width: 95%;
   justify-content: space-between;
   align-items: center;
-  padding: 0 17px 0;
+  max-width: 634px;
 }
 .menu-title h2 {
   font-family: Shrikhand;
@@ -271,7 +281,8 @@
 }
 
 .menu-section {
-  padding: 40px 13px 0;
+  width: 100%;
+  padding: 40px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,7 +291,7 @@
 .menu-type {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 95%;
   max-width: 634px;
   justify-content: center;
 }
@@ -289,7 +300,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 95%;
 }
 .menu-card .card {
   overflow: hidden;
@@ -304,11 +315,12 @@
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
 }
 .menu-card .card:hover .check {
-  transition: width 500ms linear;
+  transition: width 200ms linear;
   width: 10%;
+  padding-left: 1px;
 }
 .menu-card .card:hover .card-content {
-  transition: width 500ms linear;
+  transition: width 200ms linear;
   width: 90%;
 }
 .menu-card .content {
@@ -338,6 +350,12 @@
 }
 .menu-card .price {
   margin-right: 20px;
+}
+
+.menu .button {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 50px;
 }
 
 /***** Footer *****/
