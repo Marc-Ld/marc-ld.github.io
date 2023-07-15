@@ -256,13 +256,14 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
 }
 
 .restaurant-card {
-    max-width: 1080px;
+    max-width: 1200px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     .card {
+        cursor: pointer;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -272,6 +273,8 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
         height: 100%;
         padding-bottom: 6px;
         margin-bottom: 18px;
+        text-decoration: none;
+        color: black;
     }
     img {
         height: 180px ;
@@ -331,22 +334,46 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
     width: 95%;
     justify-content: space-between;
     align-items: center;
-    max-width: 370px;
+    max-width: 634px;
     h2 {
         font-family: Shrikhand;
         font-size: 28px;
     }
     i {
         margin-right: 24px;
+        cursor: pointer;
     }
 }
 
-.menu-section {
+.menu-section-1, .menu-section-2, .menu-section-3 {
     width: 100%;
     padding: 40px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.menu-section-1 {
+    opacity: 0;
+    animation: opacity_menu 300ms ease 1s;
+    animation-fill-mode:forwards;
+}
+.menu-section-2 {
+    opacity: 0;
+    animation: opacity_menu 300ms ease 2s;
+    animation-fill-mode:forwards;
+}
+.menu-section-3 {
+    opacity: 0;
+    animation: opacity_menu 300ms ease 3s;
+    animation-fill-mode:forwards;
+}
+@keyframes opacity_menu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .menu-type {
@@ -402,11 +429,15 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
         width: 100%;
     }
     .check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 0;
         height: 69px;
         background-color: var(--third-color);
         border-radius: 0 20px 20px 0;
         z-index: 1;
+        color: white;
     }
     .card-txt {
         margin-left: 15px;
@@ -419,6 +450,7 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
     }
     .price {
         margin-right: 20px;
+        margin-bottom: -20px;
     }
     
 }
@@ -458,3 +490,83 @@ footer {
         margin-right: 10px;
     }
 }
+
+/******** responsive *********/
+
+@media (min-width:1024px) {
+    .header {
+        height: 96px;
+        img {
+            width: 200px;
+            height: 34.2px;
+        }
+        i {
+            top: 50px;
+        }
+    }
+    .functioning {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+        .functioning-title {
+            display: flex;
+            max-width: 1140px;
+            width: 100%;
+        }
+        ol {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1100px;
+            width: 100%;
+        }
+        li {
+            display: inline-block;
+            margin-right: 40px;
+            max-width: 335px;
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    .restaurant {
+        justify-content: center;
+        align-items: center;
+        .restaurant-title {
+            max-width: 1130px;
+            width: 100%;
+        }
+        .restaurant-card {
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            justify-items: center;
+            margin-left: 0;
+        }
+        .card {
+            margin-right: 20px;
+        }
+    }
+    .menu-title {
+        max-width: 365px;
+    }
+    footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+        ul {
+            display: inline-block;
+            text-align: right;
+        }
+        li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+        .footer-logo {
+            margin-right: 50px;
+            margin-left : 100px;
+            
+        }
+    }
+    }
