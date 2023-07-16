@@ -210,7 +210,33 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
         object-fit: cover;
     }
 }
+.heart__icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    &--empty{
+        position: absolute;
+        color: black;
+    }
+    &--full{
+        position: absolute;
+        opacity: 0;
+        background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 1ms;
+    }
+    &:hover &--full{
+        opacity: 1;
 
+    }
+    &:hover &--empty{
+        opacity: 0;
+    }
+}
 .heart {
     .fa-solid {
         color: transparent;
@@ -335,6 +361,7 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
     justify-content: space-between;
     align-items: center;
     max-width: 634px;
+    white-space: nowrap;
     h2 {
         font-family: Shrikhand;
         font-size: 28px;
@@ -416,6 +443,10 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
                 transition: width 200ms linear;
                 width: 90%;
             }
+            .card-txt{
+                text-overflow: ellipsis;
+                white-space: nowrap;;
+            }
         }
     }
     .content {
@@ -427,6 +458,7 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        
     }
     .check {
         display: flex;
@@ -438,9 +470,13 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
         border-radius: 0 20px 20px 0;
         z-index: 1;
         color: white;
+        overflow: hidden;
     }
     .card-txt {
+        overflow: hidden;
         margin-left: 15px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .card-title {
         margin-top: 12px;

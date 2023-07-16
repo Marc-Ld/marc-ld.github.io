@@ -206,6 +206,33 @@
      object-fit: cover;
 }
 
+.heart__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.heart__icon--empty {
+  position: absolute;
+  color: black;
+}
+.heart__icon--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 1ms;
+}
+.heart__icon:hover .heart__icon--full {
+  opacity: 1;
+}
+.heart__icon:hover .heart__icon--empty {
+  opacity: 0;
+}
+
 .heart .fa-solid {
   color: transparent;
   -webkit-background-clip: text;
@@ -328,6 +355,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 634px;
+  white-space: nowrap;
 }
 .menu-title h2 {
   font-family: Shrikhand;
@@ -414,6 +442,10 @@
   transition: width 200ms linear;
   width: 90%;
 }
+.menu-card .card:hover .card-txt {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .menu-card .content {
   display: flex;
 }
@@ -433,9 +465,13 @@
   border-radius: 0 20px 20px 0;
   z-index: 1;
   color: white;
+  overflow: hidden;
 }
 .menu-card .card-txt {
+  overflow: hidden;
   margin-left: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu-card .card-title {
   margin-top: 12px;
