@@ -215,7 +215,7 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 16px;
+    margin-right: 20px;
     &--empty{
         position: absolute;
         color: black;
@@ -321,8 +321,8 @@ $clr-btn: linear-gradient( #FF79DA -11.44%, #9356DC  123.93%);
     .card-subtitle {
         margin-top: -10px;
     }
-    .heart {
-        margin-right: 20px;
+    .heart__icon {
+        margin-right: 30px;
     }
 }
 .new {

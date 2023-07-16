@@ -211,7 +211,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 16px;
+  margin-right: 20px;
 }
 .heart__icon--empty {
   position: absolute;
@@ -316,8 +316,8 @@
 .restaurant-card .card-subtitle {
   margin-top: -10px;
 }
-.restaurant-card .heart {
-  margin-right: 20px;
+.restaurant-card .heart__icon {
+  margin-right: 30px;
 }
 
 .new {
